@@ -1,70 +1,87 @@
-<?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F1 Ultimate Quiz</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>F1Quiz - Test Your Formula 1 Knowledge</title>
+    <link rel="stylesheet" href="landing_page.css">
+    <!-- Google Fonts for a racing/sporty look -->
+    <link href="https://fonts.googleapis.com/css2?family=Formula1:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="quiz-container">
-        <header>
-            <h1>F1 <span>ULTIMATE</span> QUIZ</h1>
-        </header>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">F1<span>QUIZ</span></div>
+        <nav>
+            <a href="login.php" class="btn btn-secondary">Login</a>
+            <a href="register.php" class="btn btn-primary">Sign Up</a>
+        </nav>
+    </header>
 
-        <div id="start-screen" class="screen active">
-            <h2>Test Your Formula 1 Knowledge</h2>
-            <p>Do you have what it takes to finish P1? Start the lights to find out.</p>
-            
-            <select id="difficulty-select" class="btn secondary-btn" style="background-color: var(--card-bg); margin-bottom: 20px;">
-                <option value="easy">Easy (Safety Car Pace) - 10 Pts/Q</option>
-                <option value="medium" selected>Medium (Race Pace) - 20 Pts/Q</option>
-                <option value="hard">Hard (Qualifying Pace) - 30 Pts/Q</option>
-            </select>
-
-            <button id="start-btn" class="btn primary-btn">START RACE</button>
-            <button class="btn secondary-btn" onclick="window.location.href='dashboard.php'">BACK TO PIT WALL</button>
-        </div>
-
-        <div id="quiz-screen" class="screen">
-            <div class="progress-container">
-                <span id="question-tracker">Question 1/10</span>
-                <div class="progress-bar">
-                    <div id="progress-fill"></div>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">Lights Out and Away We Go!</span>
+            <h1>Are You the Ultimate <br><span class="highlight">Formula 1</span> Fan?</h1>
+            <p>Put your F1 knowledge to the ultimate test. Outsmart the grid, climb the global leaderboard, and prove you belong on the podium.</p>
+            <div class="hero-actions">
+                <a href="register.php" class="btn btn-large btn-primary">Start Racing Now</a>
+                <a href="#features" class="btn btn-large btn-outline">Learn More</a>
             </div>
-            
-            <h2 id="question-text">Question goes here?</h2>
-            
-            <div id="options-container" class="options-grid">
-            </div>
-
-            <button id="next-btn" class="btn secondary-btn hide">NEXT LAP <span>&#10140;</span></button>
         </div>
+    </section>
 
-        <div id="result-screen" class="screen">
-            <h2>CHEQUERED FLAG!</h2>
-            <p>Your Final Classification:</p>
-            <div class="score-display">
-                <span id="score-text">0</span> / <span id="total-text">10</span>
-            </div>
-            <h3 style="color: var(--correct); margin-bottom: 15px; font-style: italic; letter-spacing: 1px;">
-                POINTS EARNED: <span id="points-text">0</span>
-            </h3>
-            <p id="feedback-text">Good effort!</p>
-            <button id="restart-btn" class="btn primary-btn">RETURN TO DASHBOARD</button>
+    <!-- Stats / Social Proof Banner -->
+    <section class="stats-banner">
+        <div class="stat-item">
+            <h3>500+</h3>
+            <p>Trivia Questions</p>
         </div>
-    </div>
+        <div class="stat-item">
+            <h3>10k+</h3>
+            <p>Active F1 Fans</p>
+        </div>
+        <div class="stat-item">
+            <h3>20</h3>
+            <p>Global Grand Prix Tracks Covered</p>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Engineered for True Tifosi & Fans</h2>
+        <p class="section-subtitle">Experience a dynamic quiz platform optimized for speed and competition.</p>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon">🏎️</div>
+                <h3>Real-Time Questions</h3>
+                <p>Dynamic questions fetched straight from our database covering historic eras to the 2026 season regulations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">⏱️</div>
+                <h3>Beat the Clock</h3>
+                <p>Formula 1 is all about milliseconds. Answer quickly to maximize your score and dominate the leaderboard.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🏆</div>
+                <h3>Personal Driver Profile</h3>
+                <p>Track your race history, review previous scores, and watch your stats improve over time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Admin Port -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 F1Quiz App. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="admin-login.php" class="admin-link">🔒 Admin Portal</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
