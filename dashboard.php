@@ -13,17 +13,25 @@ $user_id = $_SESSION['user_id'];
 $user_query = "
     SELECT u.username, u.super_license_points, t.teamName, t.teamColor,
            (SELECT r.rankName 
-            FROM Rank r 
+            FROM `rank` r
             WHERE u.super_license_points >= r.minPoints 
             ORDER BY r.minPoints DESC LIMIT 1) as player_rank
     FROM users u
-    LEFT JOIN team t ON u.teamID = t.teamID
+    LEFT JOIN `team` t ON u.teamID = t.teamID
     WHERE u.id = ?
 ";
 $stmt = $conn->prepare($user_query);
+if (!$stmt) {
+    error_log('Dashboard user query failed: ' . $conn->error);
+    http_response_code(500);
+    exit('The dashboard is temporarily unavailable. Please try again later.');
+}
 $stmt->bind_param("i", $user_id);
-$stmt->execute();
-$user_data = $stmt->get_result()->fetch_assoc();
+if (!$stmt->execute() || !($user_data = $stmt->get_result()->fetch_assoc())) {
+    error_log('Dashboard user lookup failed: ' . $stmt->error);
+    http_response_code(500);
+    exit('The dashboard is temporarily unavailable. Please try again later.');
+}
 
 // Fallback if no rank matches the criteria
 $player_rank = $user_data['player_rank'] ?? "UNRANKED";
@@ -32,29 +40,44 @@ $player_rank = $user_data['player_rank'] ?? "UNRANKED";
 $leaderboard_query = "
     SELECT u.id, u.username, u.super_license_points, t.teamName, t.teamColor 
     FROM users u 
-    LEFT JOIN team t ON u.teamID = t.teamID
+    LEFT JOIN `team` t ON u.teamID = t.teamID
     ORDER BY u.super_license_points DESC 
     LIMIT 10
 ";
 $leaderboard_result = $conn->query($leaderboard_query);
+if (!$leaderboard_result) {
+    error_log('Dashboard leaderboard query failed: ' . $conn->error);
+    http_response_code(500);
+    exit('The dashboard is temporarily unavailable. Please try again later.');
+}
 
 // 3. Determine user's grid rank position
-$rank_query = "SELECT COUNT(*) as rank FROM users WHERE super_license_points > ?";
+$rank_query = "SELECT COUNT(*) AS position_count FROM users WHERE super_license_points > ?";
 $rank_stmt = $conn->prepare($rank_query);
+if (!$rank_stmt) {
+    error_log('Dashboard rank query failed: ' . $conn->error);
+    http_response_code(500);
+    exit('The dashboard is temporarily unavailable. Please try again later.');
+}
 $rank_stmt->bind_param("i", $user_data['super_license_points']);
 $rank_stmt->execute();
 $rank_data = $rank_stmt->get_result()->fetch_assoc();
-$current_rank = "P" . ($rank_data['rank'] + 1);
+$current_rank = "P" . ($rank_data['position_count'] + 1);
 
 // 4. Constructor Standings (Aggregated Team Scores using Team relational table)
 $team_standings_query = "
     SELECT t.teamName, t.teamColor, SUM(u.super_license_points) as team_points 
     FROM users u 
-    INNER JOIN team t ON u.teamID = t.teamID
+    INNER JOIN `team` t ON u.teamID = t.teamID
     GROUP BY t.teamID, t.teamName, t.teamColor 
     ORDER BY team_points DESC
 ";
 $team_standings_result = $conn->query($team_standings_query);
+if (!$team_standings_result) {
+    error_log('Dashboard team standings query failed: ' . $conn->error);
+    http_response_code(500);
+    exit('The dashboard is temporarily unavailable. Please try again later.');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
