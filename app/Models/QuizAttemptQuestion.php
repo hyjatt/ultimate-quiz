@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class QuizAttemptQuestion extends Model
 {
@@ -25,12 +26,12 @@ class QuizAttemptQuestion extends Model
         ];
     }
 
-    public function attempt()
+    public function attempt(): BelongsTo
     {
         return $this->belongsTo(QuizAttempt::class, 'quiz_attempt_id');
     }
 
-    public function question()
+    public function question(): BelongsTo
     {
         return $this->belongsTo(Question::class);
     }

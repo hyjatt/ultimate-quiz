@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Middleware\EnsureActiveUser;
+use App\Http\Middleware\EnsureAdministrator;
 use App\Http\Middleware\EnsurePlayer;
+use App\Http\Middleware\EnsureSuperAdministrator;
 use App\Http\Middleware\HandleInertiaRequests;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -22,6 +25,9 @@ return Application::configure(basePath: dirname(__DIR__))
 
         $middleware->alias([
             'player' => EnsurePlayer::class,
+            'active' => EnsureActiveUser::class,
+            'admin' => EnsureAdministrator::class,
+            'superadmin' => EnsureSuperAdministrator::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

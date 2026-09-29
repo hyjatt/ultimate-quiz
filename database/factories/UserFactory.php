@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\UserRole;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
@@ -42,6 +43,30 @@ class UserFactory extends Factory
     {
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
+        ]);
+    }
+
+    public function admin(): static
+    {
+        return $this->state(fn (array $attributes): array => [
+            'role' => UserRole::Admin,
+            'team_id' => null,
+        ]);
+    }
+
+    public function superAdmin(): static
+    {
+        return $this->state(fn (array $attributes): array => [
+            'role' => UserRole::SuperAdmin,
+            'team_id' => null,
+        ]);
+    }
+
+    public function suspended(): static
+    {
+        return $this->state(fn (array $attributes): array => [
+            'suspended_at' => now(),
+            'suspension_reason' => 'Account review',
         ]);
     }
 }

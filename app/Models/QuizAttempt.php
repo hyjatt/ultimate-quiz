@@ -6,6 +6,8 @@ use App\Enums\QuizAttemptStatus;
 use App\Enums\QuizDifficulty;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class QuizAttempt extends Model
 {
@@ -33,12 +35,12 @@ class QuizAttempt extends Model
         ];
     }
 
-    public function user()
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    public function attemptQuestions()
+    public function attemptQuestions(): HasMany
     {
         return $this->hasMany(QuizAttemptQuestion::class)->orderBy('position');
     }
