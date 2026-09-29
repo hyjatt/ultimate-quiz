@@ -29,4 +29,4 @@ function logUserAction($conn, $user_id, $action) {
     $stmt->bind_param("is", $user_id, $action);
     $stmt->execute();
 }
-?>
+?>  
