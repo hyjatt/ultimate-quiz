@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::inertia('/', 'welcome')->name('home');
 
-Route::middleware(['auth', 'verified', 'player'])->group(function () {
+Route::middleware(['auth', 'verified', 'active', 'player'])->group(function () {
     Route::get('dashboard', DashboardController::class)->name('dashboard');
     Route::inertia('quiz', 'quiz')->name('quiz');
     Route::post('quiz/attempts', [QuizAttemptController::class, 'store'])->name('quiz.attempts.store');
@@ -15,3 +15,4 @@ Route::middleware(['auth', 'verified', 'player'])->group(function () {
 });
 
 require __DIR__.'/settings.php';
+require __DIR__.'/admin.php';

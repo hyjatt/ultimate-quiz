@@ -47,6 +47,7 @@ class HandleInertiaRequests extends Middleware
                     'role',
                     'team_id',
                     'points',
+                    'suspended_at',
                 ]),
             ],
             'flash' => [

@@ -2,6 +2,7 @@
 
 namespace App\Concerns;
 
+use App\Models\Team;
 use App\Models\User;
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Validation\Rule;
@@ -13,12 +14,18 @@ trait ProfileValidationRules
      *
      * @return array<string, array<int, ValidationRule|array<mixed>|string>>
      */
-    protected function profileRules(?int $userId = null): array
+    protected function profileRules(?int $userId = null, ?int $currentTeamId = null): array
     {
         return [
             'username' => $this->usernameRules($userId),
             'email' => $this->emailRules($userId),
-            'team_id' => ['required', 'integer', 'exists:teams,id'],
+            'team_id' => [
+                'required',
+                'integer',
+                Rule::exists(Team::class, 'id')->where(fn ($query) => $query
+                    ->where('is_active', true)
+                    ->when($currentTeamId !== null, fn ($teamQuery) => $teamQuery->orWhere('id', $currentTeamId))),
+            ],
         ];
     }
 

@@ -1,0 +1,17 @@
+import { Link, router, useForm } from '@inertiajs/react';
+import { BadgeCheck, Ban, Pencil, RotateCcw } from 'lucide-react';
+import Pagination from '../../../components/admin/Pagination';
+import StatusBadge from '../../../components/admin/StatusBadge';
+import AdminLayout from '../../../layouts/AdminLayout';
+
+export default function PlayerShow({ player, attempts }) {
+    const suspension = useForm({ reason: player.suspension_reason ?? '' });
+    const suspend = (event) => { event.preventDefault(); suspension.post(`/admin/players/${player.id}/suspension`); };
+    const reactivate = () => router.delete(`/admin/players/${player.id}/suspension`);
+    const verify = () => router.post(`/admin/players/${player.id}/verification`);
+
+    return <AdminLayout title={player.username} eyebrow="Player inspection" actions={<Link href={`/admin/players/${player.id}/edit`} className="button-primary"><Pencil size={16} /> Edit</Link>}><section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4"><div className="admin-metric"><span className="metric-label">Email</span><p className="mt-4 break-all font-semibold">{player.email}</p></div><div className="admin-metric"><span className="metric-label">Team</span><p className="mt-4 font-semibold">{player.team?.name ?? 'Independent'}</p></div><div className="admin-metric"><span className="metric-label">Points</span><p className="mt-4 font-display text-3xl font-black italic">{player.points}</p></div><div className="admin-metric"><span className="metric-label">Account</span><div className="mt-4"><StatusBadge active={!player.suspended_at}>{player.suspended_at ? 'Suspended' : 'Active'}</StatusBadge></div></div></section>
+        <section className="admin-panel mt-6 p-6"><h2 className="admin-section-title">Account controls</h2><div className="mt-5 flex flex-wrap gap-3">{!player.email_verified_at && <button onClick={verify} className="button-ghost"><BadgeCheck size={16} /> Mark verified</button>}{player.suspended_at ? <button onClick={reactivate} className="button-primary"><RotateCcw size={16} /> Reactivate</button> : null}</div>{!player.suspended_at && <form onSubmit={suspend} className="mt-5 flex max-w-2xl flex-col gap-3 sm:flex-row"><input className="field grow" value={suspension.data.reason} onChange={(e) => suspension.setData('reason', e.target.value)} placeholder="Required suspension reason" /><button className="button-danger" disabled={suspension.processing}><Ban size={16} /> Suspend</button>{suspension.errors.reason && <p className="text-xs text-red-300">{suspension.errors.reason}</p>}</form>}{player.suspended_at && <p className="mt-4 text-sm text-slate-400">Reason: {player.suspension_reason}</p>}</section>
+        <section className="mt-6"><h2 className="admin-section-title mb-4">Attempt history</h2><div className="admin-table-wrap"><table className="admin-table"><thead><tr><th>ID</th><th>Difficulty</th><th>Status</th><th>Accuracy</th><th>Points</th><th>Started</th></tr></thead><tbody>{attempts.data.map((attempt) => <tr key={attempt.id}><td><Link className="text-link" href={`/admin/attempts/${attempt.id}`}>#{attempt.id}</Link></td><td className="uppercase">{attempt.difficulty}</td><td>{attempt.status}</td><td>{attempt.accuracy}%</td><td>{attempt.points_awarded}</td><td>{new Date(attempt.started_at).toLocaleString()}</td></tr>)}{!attempts.data.length && <tr><td colSpan="6" className="py-10 text-center text-slate-500">No attempts yet.</td></tr>}</tbody></table></div><Pagination links={attempts.links} /></section>
+    </AdminLayout>;
+}

@@ -52,7 +52,7 @@ class FortifyServiceProvider extends ServiceProvider
                 ->orWhereRaw('LOWER(username) = ?', [$login])
                 ->first();
 
-            return $user && Hash::check((string) $request->input('password'), $user->password)
+            return $user && $user->suspended_at === null && Hash::check((string) $request->input('password'), $user->password)
                 ? $user
                 : null;
         });
@@ -84,7 +84,7 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::registerView(fn () => Inertia::render('auth/register', [
             'passwordRules' => Password::defaults()->toPasswordRulesString(),
-            'teams' => Team::query()->orderBy('name')->get(['id', 'name']),
+            'teams' => Team::query()->where('is_active', true)->orderBy('name')->get(['id', 'name']),
         ]));
 
         Fortify::confirmPasswordView(fn () => Inertia::render('auth/confirm-password'));

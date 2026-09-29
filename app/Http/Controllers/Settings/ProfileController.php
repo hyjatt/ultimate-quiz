@@ -22,7 +22,11 @@ class ProfileController extends Controller
     {
         return Inertia::render('settings/profile', [
             'mustVerifyEmail' => $request->user() instanceof MustVerifyEmail,
-            'teams' => Team::query()->orderBy('name')->get(['id', 'name']),
+            'teams' => Team::query()
+                ->where('is_active', true)
+                ->orWhereKey($request->user()->team_id)
+                ->orderBy('name')
+                ->get(['id', 'name']),
             'stats' => [
                 'totalRaces' => QuizAttempt::query()
                     ->whereBelongsTo($request->user())
