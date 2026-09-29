@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // Dynamically fetch your real F1 Team options from the Team table
-$team_query = $conn->query("SELECT teamID, teamName FROM Team");
+$team_query = $conn->query("SELECT teamID, teamName FROM team");
 $teams = [];
 if($team_query){
     while($row = $team_query->fetch_assoc()){

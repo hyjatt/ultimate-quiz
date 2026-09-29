@@ -55,7 +55,7 @@ $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $user_data = $stmt->get_result()->fetch_assoc();
 
-$team_query = $conn->query("SELECT teamID, teamName FROM Team");
+$team_query = $conn->query("SELECT teamID, teamName FROM team");
 $teams = [];
 if($team_query){
     while($row = $team_query->fetch_assoc()){

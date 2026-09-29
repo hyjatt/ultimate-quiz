@@ -98,7 +98,7 @@ $users = $conn->query("
 ") ?: $conn->query("
     SELECT p.*, t.teamName, t.teamColor 
     FROM users p 
-    LEFT JOIN Team t ON p.teamID = t.teamID 
+    LEFT JOIN team t ON p.teamID = t.teamID
     ORDER BY p.playerID DESC
 ");
 
@@ -111,7 +111,7 @@ if($res = $conn->query("SELECT COUNT(*) as count FROM questions")) { $total_ques
 
 // Fetch Teams for dropdown dynamic selections
 $teams_list = [];
-if($team_res = $conn->query("SELECT teamID, teamName FROM Team ORDER BY teamName ASC")) {
+if($team_res = $conn->query("SELECT teamID, teamName FROM team ORDER BY teamName ASC")) {
     while($row = $team_res->fetch_assoc()) {
         $teams_list[] = $row;
     }

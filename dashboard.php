@@ -17,7 +17,7 @@ $user_query = "
             WHERE u.super_license_points >= r.minPoints 
             ORDER BY r.minPoints DESC LIMIT 1) as player_rank
     FROM users u
-    LEFT JOIN Team t ON u.teamID = t.teamID
+    LEFT JOIN team t ON u.teamID = t.teamID
     WHERE u.id = ?
 ";
 $stmt = $conn->prepare($user_query);
@@ -32,7 +32,7 @@ $player_rank = $user_data['player_rank'] ?? "UNRANKED";
 $leaderboard_query = "
     SELECT u.id, u.username, u.super_license_points, t.teamName, t.teamColor 
     FROM users u 
-    LEFT JOIN Team t ON u.teamID = t.teamID 
+    LEFT JOIN team t ON u.teamID = t.teamID
     ORDER BY u.super_license_points DESC 
     LIMIT 10
 ";
@@ -50,7 +50,7 @@ $current_rank = "P" . ($rank_data['rank'] + 1);
 $team_standings_query = "
     SELECT t.teamName, t.teamColor, SUM(u.super_license_points) as team_points 
     FROM users u 
-    INNER JOIN Team t ON u.teamID = t.teamID 
+    INNER JOIN team t ON u.teamID = t.teamID
     GROUP BY t.teamID, t.teamName, t.teamColor 
     ORDER BY team_points DESC
 ";
