@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // FIXED: Using password_verify() to read the secure hash.
         // The fallback '|| $password === $row['password']' keeps plain-text accounts working until they reset their password.
         if (password_verify($password, $row['password']) || $password === $row['password']) {
+            unset($_SESSION['admin_id']);
             $_SESSION['user_id'] = $row['id'];
             
             // Log action if function exists

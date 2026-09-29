@@ -14,8 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $stmt->get_result();
 
     if ($row = $result->fetch_assoc()) {
-        if ($password === $row['password']) {
-            $_SESSION['user_id'] = $row['id'];
+        if (password_verify($password, $row['password']) || $password === $row['password']) {
+            unset($_SESSION['user_id']);
+            $_SESSION['admin_id'] = $row['id'];
             header("Location: admin-dashboard.php");
             exit();
         } else {

@@ -3,7 +3,7 @@ session_start();
 require 'db.php';
 
 // Authentication Check
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['admin_id'])) {
     header("Location: admin-login.php");
     exit();
 }
@@ -137,7 +137,7 @@ $activity_logs = $conn->query("SELECT u.username, a.action, a.timestamp FROM act
         <div class="driver-profile">
             <span class="status-indicator" style="background-color: var(--f1-red);"></span>
             <span style="color:var(--text-light); margin-right:15px;">DIRECTOR</span>
-            <a href="admin-login.php" style="color:var(--text-muted); text-decoration:none; font-size:0.8rem;">[ LOGOUT ]</a>
+            <a href="logout.php" style="color:var(--text-muted); text-decoration:none; font-size:0.8rem;">[ LOGOUT ]</a>
         </div>
     </header>
 

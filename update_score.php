@@ -1,11 +1,12 @@
 <?php
 session_start();
 require 'db.php';
+header('Content-Type: application/json');
 
 // Force PHP to report any hidden SQL errors out loud
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['user_id'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['user_id'])) {
     
     // Grab variables from the Javascript FormData
     $score = isset($_POST['score']) ? (int)$_POST['score'] : 0;
@@ -14,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 
     // Calculate accuracy percentage dynamically
-    $accuracy = ($correct / 10) * 100;
+    $accuracy = max(0, min(100, (int)round(($correct / 10) * 100)));
 
     // 1. UPDATE USER POINTS TOTAL
     if ($score > 0) {
@@ -37,8 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['user_id'])) {
         logUserAction($conn, $user_id, "Completed $difficulty quiz: $correct/10 correct. Earned $score pts.");
     }
 
-    echo "Success";
+    echo json_encode(['success' => true, 'message' => 'Telemetry logs synchronized successfully.']);
 } else {
-    echo "Error: Unauthenticated access or invalid method request.";
+    http_response_code(401);
+    echo json_encode(['success' => false, 'message' => 'Unauthenticated access or invalid method request.']);
 }
 ?>
