@@ -6,8 +6,10 @@ use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Models\Team;
 use App\Models\User;
+use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
@@ -35,6 +37,7 @@ class FortifyServiceProvider extends ServiceProvider
         $this->configureActions();
         $this->configureViews();
         $this->configureRateLimiting();
+        $this->configureVerificationMail();
     }
 
     /**
@@ -101,5 +104,23 @@ class FortifyServiceProvider extends ServiceProvider
             return Limit::perMinute(5)->by($throttleKey);
         });
 
+    }
+
+    /**
+     * Configure the branded verification email used by the race experience.
+     */
+    private function configureVerificationMail(): void
+    {
+        VerifyEmail::toMailUsing(function (User $notifiable, string $url): MailMessage {
+            return (new MailMessage)
+                ->subject('Confirm your F1Quiz race licence')
+                ->view([
+                    'html' => 'emails.verify-email',
+                    'text' => 'emails.verify-email-text',
+                ], [
+                    'username' => $notifiable->username,
+                    'url' => $url,
+                ]);
+        });
     }
 }

@@ -7,6 +7,7 @@ use App\Models\Team;
 use App\Models\User;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Auth\Notifications\ResetPassword;
+use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Hash;
@@ -106,5 +107,17 @@ class AuthenticationTest extends TestCase
         $this->post('/logout');
         $this->post('/forgot-password', ['email' => $user->email])->assertSessionHasNoErrors();
         Notification::assertSentTo($user, ResetPassword::class);
+    }
+
+    public function test_verification_email_uses_the_f1quiz_theme(): void
+    {
+        $user = User::factory()->unverified()->create(['username' => 'PoleSitter']);
+        $mail = (new VerifyEmail)->toMail($user);
+
+        $this->assertSame('Confirm your F1Quiz race licence', $mail->subject);
+        $this->assertSame('emails.verify-email', $mail->view['html']);
+        $this->assertSame('emails.verify-email-text', $mail->view['text']);
+        $this->assertSame('PoleSitter', $mail->viewData['username']);
+        $this->assertStringContainsString('/email/verify/', $mail->viewData['url']);
     }
 }
