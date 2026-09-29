@@ -1,0 +1,1025 @@
+[
+    {
+        "prompt": "Who holds the record for the most World Drivers' Championships?",
+        "options": {
+            "a": "Ayrton Senna",
+            "b": "Lewis Hamilton",
+            "c": "Max Verstappen",
+            "d": "Sebastian Vettel"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which circuit is known as the 'Temple of Speed'?",
+        "options": {
+            "a": "Silverstone",
+            "b": "Monza",
+            "c": "Spa-Francorchamps",
+            "d": "Monaco"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which track formerly hosted the Malaysian Grand Prix?",
+        "options": {
+            "a": "Johor Circuit",
+            "b": "Sepang International Circuit",
+            "c": "Marina Bay Street Circuit",
+            "d": "Buddh International Circuit"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Who won the first ever Formula 1 World Drivers' Championship in 1950?",
+        "options": {
+            "a": "Juan Manuel Fangio",
+            "b": "Alberto Ascari",
+            "c": "Giuseppe Farina",
+            "d": "Stirling Moss"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which driver holds the record for the most Grand Prix victories?",
+        "options": {
+            "a": "Michael Schumacher",
+            "b": "Lewis Hamilton",
+            "c": "Max Verstappen",
+            "d": "Alain Prost"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which constructor has won the most Formula 1 World Constructors' Championships?",
+        "options": {
+            "a": "McLaren",
+            "b": "Williams",
+            "c": "Mercedes",
+            "d": "Ferrari"
+        },
+        "correct_option": "d",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Who is the youngest ever Formula 1 World Champion?",
+        "options": {
+            "a": "Lewis Hamilton",
+            "b": "Fernando Alonso",
+            "c": "Sebastian Vettel",
+            "d": "Max Verstappen"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "At which circuit is the Italian Grand Prix traditionally held?",
+        "options": {
+            "a": "Imola",
+            "b": "Mugello",
+            "c": "Monza",
+            "d": "Misano"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which driver is famously known by the nickname \"The Professor\"?",
+        "options": {
+            "a": "Niki Lauda",
+            "b": "Alain Prost",
+            "c": "Jackie Stewart",
+            "d": "Ayrton Senna"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What does \"DRS\" stand for in Formula 1?",
+        "options": {
+            "a": "Drag Reduction System",
+            "b": "Downforce Recovery System",
+            "c": "Dynamic Racing Setup",
+            "d": "Driver Response System"
+        },
+        "correct_option": "a",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which tire manufacturer became the sole supplier for Formula 1 in 2011?",
+        "options": {
+            "a": "Michelin",
+            "b": "Bridgestone",
+            "c": "Goodyear",
+            "d": "Pirelli"
+        },
+        "correct_option": "d",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Who is the only driver to win the Formula 1 World Championship posthumously?",
+        "options": {
+            "a": "Gilles Villeneuve",
+            "b": "Jochen Rindt",
+            "c": "Ronnie Peterson",
+            "d": "Wolfgang von Trips"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which circuit is the longest on the modern Formula 1 calendar?",
+        "options": {
+            "a": "Circuit of the Americas",
+            "b": "Silverstone",
+            "c": "Spa-Francorchamps",
+            "d": "Suzuka"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "In what year did the inaugural night race in Singapore take place?",
+        "options": {
+            "a": "2007",
+            "b": "2008",
+            "c": "2009",
+            "d": "2010"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which driver famously won his first race on his debut for Red Bull Racing in 2016?",
+        "options": {
+            "a": "Daniel Ricciardo",
+            "b": "Sebastian Vettel",
+            "c": "Max Verstappen",
+            "d": "Pierre Gasly"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What color flag is waved to instruct a driver to return to the pits due to a mechanical issue?",
+        "options": {
+            "a": "Black flag",
+            "b": "Black flag with an orange circle",
+            "c": "Black and white diagonal flag",
+            "d": "Red flag"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which two drivers are tied for the most Formula 1 World Drivers' Championships?",
+        "options": {
+            "a": "Alain Prost and Ayrton Senna",
+            "b": "Michael Schumacher and Lewis Hamilton",
+            "c": "Juan Manuel Fangio and Lewis Hamilton",
+            "d": "Sebastian Vettel and Alain Prost"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which team achieved an unprecedented 15 wins out of 16 races during the 1988 season?",
+        "options": {
+            "a": "Williams",
+            "b": "Ferrari",
+            "c": "McLaren",
+            "d": "Benetton"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Who was the first Chinese driver to compete in a Formula 1 race?",
+        "options": {
+            "a": "Ma Qinghua",
+            "b": "Yifei Ye",
+            "c": "Zhou Guanyu",
+            "d": "Ho-Pin Tung"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which driver is known by the nickname \"The Honey Badger\"?",
+        "options": {
+            "a": "Valtteri Bottas",
+            "b": "Lando Norris",
+            "c": "Daniel Ricciardo",
+            "d": "Nico Hülkenberg"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "How many points are awarded to the winner of a standard Formula 1 Grand Prix?",
+        "options": {
+            "a": "10",
+            "b": "15",
+            "c": "25",
+            "d": "30"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which driver holds the record for the most pole positions in Formula 1 history?",
+        "options": {
+            "a": "Ayrton Senna",
+            "b": "Michael Schumacher",
+            "c": "Sebastian Vettel",
+            "d": "Lewis Hamilton"
+        },
+        "correct_option": "d",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What is the minimum age requirement to compete in Formula 1 under current FIA regulations?",
+        "options": {
+            "a": "16",
+            "b": "17",
+            "c": "18",
+            "d": "19"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which father-son duo both won the Formula 1 World Drivers' Championship?",
+        "options": {
+            "a": "Gilles and Jacques Villeneuve",
+            "b": "Graham and Damon Hill",
+            "c": "Jos and Max Verstappen",
+            "d": "Mario and Michael Andretti"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which circuit features the famous \"Eau Rouge\" and \"Raidillon\" corners?",
+        "options": {
+            "a": "Monaco",
+            "b": "Spa-Francorchamps",
+            "c": "Suzuka",
+            "d": "Interlagos"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Who was the team principal of Ferrari during their dominant era from 2000 to 2004?",
+        "options": {
+            "a": "Stefano Domenicali",
+            "b": "Maurizio Arrivabene",
+            "c": "Jean Todt",
+            "d": "Mattia Binotto"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which driver famously won the 2007 World Championship by a single point?",
+        "options": {
+            "a": "Fernando Alonso",
+            "b": "Lewis Hamilton",
+            "c": "Kimi Räikkönen",
+            "d": "Felipe Massa"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What does the yellow flag signify in Formula 1?",
+        "options": {
+            "a": "Danger ahead, slow down",
+            "b": "Session suspended",
+            "c": "Slippery surface",
+            "d": "Slower car ahead"
+        },
+        "correct_option": "a",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which driver holds the record for the most race starts in Formula 1 history?",
+        "options": {
+            "a": "Kimi Räikkönen",
+            "b": "Fernando Alonso",
+            "c": "Rubens Barrichello",
+            "d": "Lewis Hamilton"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "In what year was the halo cockpit protection device made mandatory in Formula 1?",
+        "options": {
+            "a": "2016",
+            "b": "2017",
+            "c": "2018",
+            "d": "2019"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which driver famously survived a fiery crash on the opening lap of the 2020 Bahrain Grand Prix?",
+        "options": {
+            "a": "Kevin Magnussen",
+            "b": "Romain Grosjean",
+            "c": "Lance Stroll",
+            "d": "Daniil Kvyat"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which Formula 1 team is based in Maranello, Italy?",
+        "options": {
+            "a": "AlphaTauri",
+            "b": "Alfa Romeo",
+            "c": "Ferrari",
+            "d": "Haas"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Who won the Formula 1 World Championship in 2016 before unexpectedly retiring?",
+        "options": {
+            "a": "Jenson Button",
+            "b": "Sebastian Vettel",
+            "c": "Nico Rosberg",
+            "d": "Felipe Massa"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which flag indicates the end of a Formula 1 race?",
+        "options": {
+            "a": "Chequered flag",
+            "b": "Red flag",
+            "c": "Yellow flag",
+            "d": "Green flag"
+        },
+        "correct_option": "a",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "What does DRS stand for?",
+        "options": {
+            "a": "Drag Reduction System",
+            "b": "Downforce Racing System",
+            "c": "Direct Racing Speed",
+            "d": "Driver Reaction System"
+        },
+        "correct_option": "a",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "How many tires does a standard Formula 1 car have?",
+        "options": {
+            "a": "3",
+            "b": "4",
+            "c": "6",
+            "d": "8"
+        },
+        "correct_option": "b",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "Which team does Max Verstappen drive for?",
+        "options": {
+            "a": "Mercedes",
+            "b": "Ferrari",
+            "c": "Red Bull Racing",
+            "d": "McLaren"
+        },
+        "correct_option": "c",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "What color are the soft compound dry tires in F1?",
+        "options": {
+            "a": "White",
+            "b": "Yellow",
+            "c": "Red",
+            "d": "Green"
+        },
+        "correct_option": "c",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "Who holds the record for the most World Drivers' Championships alongside Michael Schumacher?",
+        "options": {
+            "a": "Ayrton Senna",
+            "b": "Lewis Hamilton",
+            "c": "Sebastian Vettel",
+            "d": "Alain Prost"
+        },
+        "correct_option": "b",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "What does a yellow flag mean?",
+        "options": {
+            "a": "Pit lane closed",
+            "b": "Danger, slow down",
+            "c": "Session stopped",
+            "d": "Faster car approaching"
+        },
+        "correct_option": "b",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "Which of these is a street circuit?",
+        "options": {
+            "a": "Silverstone",
+            "b": "Monza",
+            "c": "Monaco",
+            "d": "Spa-Francorchamps"
+        },
+        "correct_option": "c",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "What is the minimum age to compete in Formula 1?",
+        "options": {
+            "a": "16",
+            "b": "17",
+            "c": "18",
+            "d": "21"
+        },
+        "correct_option": "c",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "Which company is the sole tire supplier for F1?",
+        "options": {
+            "a": "Michelin",
+            "b": "Bridgestone",
+            "c": "Goodyear",
+            "d": "Pirelli"
+        },
+        "correct_option": "d",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "What part of the car protects the driver's head?",
+        "options": {
+            "a": "DRS",
+            "b": "Halo",
+            "c": "Monocoque",
+            "d": "Diffuser"
+        },
+        "correct_option": "b",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "How many drivers race for a single constructor in a standard race?",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4"
+        },
+        "correct_option": "b",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "Which penalty requires a driver to drive through the pit lane without stopping?",
+        "options": {
+            "a": "Stop-and-Go penalty",
+            "b": "Drive-through penalty",
+            "c": "Grid penalty",
+            "d": "Time penalty"
+        },
+        "correct_option": "b",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "What is the maximum number of championship points awarded for a race win?",
+        "options": {
+            "a": "10",
+            "b": "15",
+            "c": "25",
+            "d": "30"
+        },
+        "correct_option": "c",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "What does Pole Position mean?",
+        "options": {
+            "a": "Starting first on the grid",
+            "b": "Fastest lap of the race",
+            "c": "Winning the race",
+            "d": "Leading the championship"
+        },
+        "correct_option": "a",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "Which circuit is known as the Temple of Speed?",
+        "options": {
+            "a": "Silverstone",
+            "b": "Suzuka",
+            "c": "Monza",
+            "d": "Interlagos"
+        },
+        "correct_option": "c",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "What does DNF stand for?",
+        "options": {
+            "a": "Did Not Finish",
+            "b": "Did Not Fit",
+            "c": "Driver Not Found",
+            "d": "Delayed National Flag"
+        },
+        "correct_option": "a",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "Who is known as the Honey Badger?",
+        "options": {
+            "a": "Max Verstappen",
+            "b": "Daniel Ricciardo",
+            "c": "Lando Norris",
+            "d": "Fernando Alonso"
+        },
+        "correct_option": "b",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "Which flag requires a driver to let a faster car pass?",
+        "options": {
+            "a": "Blue flag",
+            "b": "Black flag",
+            "c": "White flag",
+            "d": "Yellow flag"
+        },
+        "correct_option": "a",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "What is the primary purpose of the front wing?",
+        "options": {
+            "a": "Cooling the engine",
+            "b": "Generating downforce",
+            "c": "Storing fuel",
+            "d": "Housing the telemetry"
+        },
+        "correct_option": "b",
+        "difficulty": "easy"
+    },
+    {
+        "prompt": "In what year did the V6 turbo hybrid era begin?",
+        "options": {
+            "a": "2012",
+            "b": "2014",
+            "c": "2016",
+            "d": "2018"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which driver won the World Championship in 2007 by just one point?",
+        "options": {
+            "a": "Lewis Hamilton",
+            "b": "Fernando Alonso",
+            "c": "Kimi Räikkönen",
+            "d": "Felipe Massa"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What is the name of the corner sequence Maggotts, Becketts, and Chapel?",
+        "options": {
+            "a": "Spa-Francorchamps",
+            "b": "Silverstone",
+            "c": "Suzuka",
+            "d": "Albert Park"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which constructor has won the most World Constructors' Championships?",
+        "options": {
+            "a": "McLaren",
+            "b": "Williams",
+            "c": "Ferrari",
+            "d": "Mercedes"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What is the approximate weight of an F1 car (including the driver) under modern regulations?",
+        "options": {
+            "a": "650 kg",
+            "b": "798 kg",
+            "c": "850 kg",
+            "d": "900 kg"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Who was the first ever Formula 1 World Champion in 1950?",
+        "options": {
+            "a": "Juan Manuel Fangio",
+            "b": "Alberto Ascari",
+            "c": "Giuseppe Farina",
+            "d": "Stirling Moss"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What is the duration of the penalty if a driver jumps the start?",
+        "options": {
+            "a": "5 seconds",
+            "b": "10 seconds",
+            "c": "Drive-through",
+            "d": "Stop-and-go"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which circuit features the famous Wall of Champions?",
+        "options": {
+            "a": "Circuit Gilles Villeneuve",
+            "b": "Marina Bay Street Circuit",
+            "c": "Baku City Circuit",
+            "d": "Circuit de Monaco"
+        },
+        "correct_option": "a",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "How many points does a driver get for finishing 10th in a Grand Prix?",
+        "options": {
+            "a": "0",
+            "b": "1",
+            "c": "2",
+            "d": "5"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What is the maximum fuel allowance for an F1 car during a race?",
+        "options": {
+            "a": "100 kg",
+            "b": "110 kg",
+            "c": "120 kg",
+            "d": "150 kg"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Who is the youngest race winner in Formula 1 history?",
+        "options": {
+            "a": "Sebastian Vettel",
+            "b": "Charles Leclerc",
+            "c": "Max Verstappen",
+            "d": "Fernando Alonso"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What does MGU-K stand for?",
+        "options": {
+            "a": "Motor Generator Unit - Kinetic",
+            "b": "Motor Generator Unit - Kilo",
+            "c": "Mechanical Gear Unit - Kinetic",
+            "d": "Main Generator Unit - Kinetic"
+        },
+        "correct_option": "a",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which driver is famously associated with the number 27?",
+        "options": {
+            "a": "Ayrton Senna",
+            "b": "Gilles Villeneuve",
+            "c": "Niki Lauda",
+            "d": "Alain Prost"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "How long is a typical Formula 1 race distance (excluding Monaco)?",
+        "options": {
+            "a": "250 km",
+            "b": "305 km",
+            "c": "350 km",
+            "d": "400 km"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which team famously introduced the six-wheeled P34 in 1976?",
+        "options": {
+            "a": "Lotus",
+            "b": "Brabham",
+            "c": "Tyrrell",
+            "d": "Williams"
+        },
+        "correct_option": "c",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What is the term used for rapid aerodynamic bouncing on straight sections of the track?",
+        "options": {
+            "a": "Tire degradation",
+            "b": "Porpoising",
+            "c": "Engine misfiring",
+            "d": "Brake locking"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Which track has the longest straight on the F1 calendar?",
+        "options": {
+            "a": "Monza",
+            "b": "Baku",
+            "c": "Mexico City",
+            "d": "Las Vegas"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "Who was the team principal of Ferrari during their dominant era in the early 2000s?",
+        "options": {
+            "a": "Jean Todt",
+            "b": "Stefano Domenicali",
+            "c": "Ross Brawn",
+            "d": "Maurizio Arrivabene"
+        },
+        "correct_option": "a",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "In a dry race, how many tire compounds must a driver use at minimum?",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What material are modern F1 brake discs primarily made of?",
+        "options": {
+            "a": "Steel",
+            "b": "Carbon Fiber",
+            "c": "Ceramic",
+            "d": "Aluminum"
+        },
+        "correct_option": "b",
+        "difficulty": "medium"
+    },
+    {
+        "prompt": "What was the displacement of the naturally aspirated V10 engines used in the early 2000s?",
+        "options": {
+            "a": "2.4 liters",
+            "b": "3.0 liters",
+            "c": "3.5 liters",
+            "d": "4.0 liters"
+        },
+        "correct_option": "b",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "Who is the only driver to win a World Championship posthumously?",
+        "options": {
+            "a": "Jim Clark",
+            "b": "Jochen Rindt",
+            "c": "Ronnie Peterson",
+            "d": "François Cevert"
+        },
+        "correct_option": "b",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "What is the maximum allowed width of a Formula 1 car under the current ground-effect regulations?",
+        "options": {
+            "a": "1.8 meters",
+            "b": "1.9 meters",
+            "c": "2.0 meters",
+            "d": "2.1 meters"
+        },
+        "correct_option": "c",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "In what year did active suspension get banned from Formula 1?",
+        "options": {
+            "a": "1991",
+            "b": "1993",
+            "c": "1994",
+            "d": "1996"
+        },
+        "correct_option": "c",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "Which engine manufacturer powered Brawn GP to their 2009 championship?",
+        "options": {
+            "a": "Honda",
+            "b": "Ferrari",
+            "c": "Renault",
+            "d": "Mercedes"
+        },
+        "correct_option": "d",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "How many gear ratios are mandated in a modern Formula 1 gearbox?",
+        "options": {
+            "a": "6",
+            "b": "7",
+            "c": "8",
+            "d": "9"
+        },
+        "correct_option": "c",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "Who holds the record for the most consecutive Grand Prix entries without a win?",
+        "options": {
+            "a": "Nico Hülkenberg",
+            "b": "Andrea de Cesaris",
+            "c": "Martin Brundle",
+            "d": "Romain Grosjean"
+        },
+        "correct_option": "b",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "What is the precise limit on the MGU-K energy deployment per lap?",
+        "options": {
+            "a": "2 Megajoules",
+            "b": "4 Megajoules",
+            "c": "6 Megajoules",
+            "d": "8 Megajoules"
+        },
+        "correct_option": "b",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "Which track hosted the only Formula 1 race to feature a 6-car grid?",
+        "options": {
+            "a": "Spa-Francorchamps",
+            "b": "Indianapolis",
+            "c": "Suzuka",
+            "d": "Imola"
+        },
+        "correct_option": "b",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "What is the maximum internal temperature an F1 tire blanket is permitted to reach under 2024 regulations?",
+        "options": {
+            "a": "70 °C",
+            "b": "90 °C",
+            "c": "100 °C",
+            "d": "110 °C"
+        },
+        "correct_option": "a",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "Who was the chief designer of the dominant McLaren MP4/4?",
+        "options": {
+            "a": "Adrian Newey",
+            "b": "Gordon Murray",
+            "c": "John Barnard",
+            "d": "Rory Byrne"
+        },
+        "correct_option": "b",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "The Brabham BT46B fan car competed in and won exactly how many races before being withdrawn?",
+        "options": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "5"
+        },
+        "correct_option": "a",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "What is the operational pressure of an F1 hydraulic system?",
+        "options": {
+            "a": "100 bar",
+            "b": "150 bar",
+            "c": "200 bar",
+            "d": "250 bar"
+        },
+        "correct_option": "c",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "Which driver scored the most points in the turbo era (1977-1988) without ever winning a championship?",
+        "options": {
+            "a": "Gilles Villeneuve",
+            "b": "René Arnoux",
+            "c": "Michele Alboreto",
+            "d": "Riccardo Patrese"
+        },
+        "correct_option": "b",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "What aerodynamic device was banned midway through the 2006 season?",
+        "options": {
+            "a": "F-Duct",
+            "b": "Mass Damper",
+            "c": "Double Diffuser",
+            "d": "Blown Diffuser"
+        },
+        "correct_option": "b",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "How many sensors does a typical modern F1 car have transmitting telemetry data?",
+        "options": {
+            "a": "approx 50",
+            "b": "approx 150",
+            "c": "approx 300",
+            "d": "approx 500"
+        },
+        "correct_option": "c",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "Which constructor pioneered the carbon fiber monocoque chassis?",
+        "options": {
+            "a": "Lotus",
+            "b": "McLaren",
+            "c": "Williams",
+            "d": "Ferrari"
+        },
+        "correct_option": "b",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "Under the cost cap regulations introduced in 2021, what was the baseline budget limit in USD?",
+        "options": {
+            "a": "125 million",
+            "b": "135 million",
+            "c": "145 million",
+            "d": "175 million"
+        },
+        "correct_option": "c",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "What is the ignition timing delay utilized to create an off-throttle blown diffuser effect?",
+        "options": {
+            "a": "Retarded ignition",
+            "b": "Advanced ignition",
+            "c": "Dual spark timing",
+            "d": "Cut-off sequencing"
+        },
+        "correct_option": "a",
+        "difficulty": "hard"
+    },
+    {
+        "prompt": "Which driver holds the record for the shortest Formula 1 career, measuring just 2 meters?",
+        "options": {
+            "a": "Marco Apicella",
+            "b": "Ernst Loof",
+            "c": "Perry McCarthy",
+            "d": "Chanoch Nissany"
+        },
+        "correct_option": "b",
+        "difficulty": "hard"
+    }
+]
